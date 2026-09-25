@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblConvertidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Convertidor De Moneda"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 1. MONEDA DE ORIGEN -->
+    <TextView
+        android:id="@+id/lblTipoOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Moneda a convertir "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblConvertidor" />
+
+    <RadioGroup
+        android:id="@+id/rgOrigen"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTipoOrigen">
+
+        <RadioButton
+            android:id="@+id/rdioOrigenDollar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dólares" />
+
+        <RadioButton
+            android:id="@+id/rdioOrigenYenes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yenes" />
+
+        <RadioButton
+            android:id="@+id/rdioOrigenPesoMexicano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso Mexicano" />
+
+        <RadioButton
+            android:id="@+id/rdioOrigenSoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soles" />
+    </RadioGroup>
+
+    <!-- 2. MONEDA DE DESTINO -->
+    <TextView
+        android:id="@+id/lblTipoDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text=" Moneda a la que desea convertir "
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgOrigen" />
+
+    <RadioGroup
+        android:id="@+id/rgDestino"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTipoDestino">
+
+        <RadioButton
+            android:id="@+id/rdioDestinoDollar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dólares" />
+
+        <RadioButton
+            android:id="@+id/rdioDestinoYenes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yenes" />
+
+        <RadioButton
+            android:id="@+id/rdioDestinoPesoMexicano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso Mexicano" />
+
+        <RadioButton
+            android:id="@+id/rdioDestinoSoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soles" />
+    </RadioGroup>
+
+    <!-- 3. CANTIDAD Y BOTÓN -->
+    <EditText
+        android:id="@+id/txtCantidadMoneda"
+        android:layout_width="353dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Digite la cantidad de dinero"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDestino" />
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Convertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCantidadMoneda" />
+
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Resultado: 0.0"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvertir" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

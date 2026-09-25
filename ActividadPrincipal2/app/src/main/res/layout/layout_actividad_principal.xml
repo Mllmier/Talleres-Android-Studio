@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/etiTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="428dp"
+        android:gravity="center"
+        android:text="App para Administrar las Notas"
+        android:textColor="#0000FF"
+        android:textSize="50sp" />
+
+    <!-- Botón de Universidades -->
+    <Button
+        android:id="@+id/botonUniversidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mostrarAdminUniversidad"
+        android:text="Universidades..."
+        android:textColor="#FF0000"
+        android:textSize="30sp" />
+</LinearLayout>
